@@ -5,6 +5,5 @@
 \\Vikapc\d\Notebook\Notebook.Common.Entities\obj\Debug\Notebook.Common.Entities.pdb
 D:\Notebook\Notebook.Common.Entities\bin\Debug\Notebook.Common.Entities.dll
 D:\Notebook\Notebook.Common.Entities\bin\Debug\Notebook.Common.Entities.pdb
-D:\Notebook\Notebook.Common.Entities\obj\Debug\Notebook.Common.Entities.csprojResolveAssemblyReference.cache
 D:\Notebook\Notebook.Common.Entities\obj\Debug\Notebook.Common.Entities.dll
 D:\Notebook\Notebook.Common.Entities\obj\Debug\Notebook.Common.Entities.pdb

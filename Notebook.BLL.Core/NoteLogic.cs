@@ -12,49 +12,50 @@ namespace Notebook.BLL.Core
 {
     public class NoteLogic : INoteLogic
     {
-
-        public Dictionary<int, Note> Notes;
+        private Dictionary<int, Note> notes;
+        private ContainerDAO containerDAO;
 
         public NoteLogic()
         {
-            Notes = ContainerDAO.noteDAO.GetAll().ToDictionary(ent => ent.Id, ent => ent);
+            containerDAO = new ContainerDAO();
+            notes = containerDAO.noteDAO.GetAll().ToDictionary(ent => ent.Id, ent => ent);
         }
 
         public Note Add(Note note)
         {
-            note.Id = (Notes.Keys.Count > 0) ? Notes.Keys.Max() + 1 : 1;
-            Notes.Add(note.Id, note);
+            note.Id = (notes.Keys.Count > 0) ? notes.Keys.Max() + 1 : 1;
+            notes.Add(note.Id, note);
             return note;
         }
 
         public void Delete(int id)
         {
-            Notes.Remove(id);
+            notes.Remove(id);
         }
 
         public IEnumerable<Note> GetAll()
         {
-            return Notes.Values;
+            return notes.Values;
         }
 
         public Note Get(int id)
         {
-            return Notes[id];
+            return notes[id];
         }
 
         public void Update(Note note)
         {
-            Notes[note.Id] = note;
+            notes[note.Id] = note;
         }
 
         public void Dispose()
         {
-            ContainerDAO.noteDAO.WriteAll(Notes.Values);
+            containerDAO.noteDAO.WriteAll(notes.Values);
         }
 
         public void WriteAll()
         {
-            ContainerDAO.noteDAO.WriteAll(Notes.Values);
+            containerDAO.noteDAO.WriteAll(notes.Values);
         }
     }
 }

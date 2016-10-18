@@ -12,7 +12,6 @@ namespace Notebook.DAL.File
     {
         private static string _filePath = ConfigurationManager.ConnectionStrings["file"].ConnectionString;
         private static string _fieldSeparator = ConfigurationManager.AppSettings["fieldSeparator"];
-        private const string _tmpFile = "_temp.tmp";
         private static readonly string _fileHeader = "id" + _fieldSeparator + "Surname" +
             _fieldSeparator + "Name" + _fieldSeparator + "YearOfBirth" + _fieldSeparator + "PhoneNumber";
         private static int maxId = 0;
