@@ -1,0 +1,161 @@
+﻿<div class="container-fluid">
+
+    <div class="container">
+        <h2 class="text-center">Notebook</h2>
+        <input id="showAddForm" type="checkbox" class="hide show-add-form"/>
+        <label class="btn btn-success btn-slide btn-show-add-form" for="showAddForm">
+            Add Note &nbsp;
+            <i class="glyphicon glyphicon-plus"></i>
+        </label>
+        <input id="showSearchForm" type="checkbox" class="hide show-search-form" />
+        <label class="btn btn-primary  btn-slide btn-show-search-form" for="showSearchForm">
+            Search &nbsp; &nbsp; &nbsp;
+            <i class="glyphicon glyphicon-search"></i>
+        </label>
+        <div class="input-container add-form">
+            <form name="addForm" class="row" role="form">
+                <div class="col-sm-2">
+                    <input class="form-control" type="text" placeholder="Surname" required ng-model="newNotebook.Name">
+                </div>
+                <div class="col-sm-2">
+                    <input class="form-control" type="text" placeholder="Name" required ng-model="newNotebook.Surname">
+                </div>
+                <div class="col-sm-2">
+                    <input class="form-control" type="number" placeholder="Year of birth" required min="1875" max="{{currentYear}}" ng-model="newNotebook.YearOfBirth">
+                </div>
+                <div class="col-sm-2">
+                    <input class="form-control" type="text" placeholder="Phone number" required pattern="\+?[0-9]{2,11}" title="Enter 11 numbers (with prefix + if ))" ng-model="newNotebook.PhoneNumber">
+                </div>
+                <div class="col-sm-4">
+                    <button class="btn btn-success"
+                            ng-click="addForm.$valid && addNew()">
+                        Add
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="row search-form">
+            <div class="col-sm-6">
+                <input type="text"
+                       id="search_input"
+                       placeholder="Search..."
+                       class="form-control"
+                       ng-model="search" />
+            </div>
+            <div class="col-sm-6">
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary active"
+                           ng-click="changePropForSearch('Surname')">
+                        <input type="radio"
+                               name="filter"
+                               id="filterId1"
+                               value="Name"
+                               checked="checked"
+                               maxlength="20">Surname
+                    </label>
+                    <label class="btn btn-primary"
+                           ng-click="changePropForSearch('Name')">
+                        <input type="radio"
+                               name="filter"
+                               id="filterId2"
+                               value="Surname"
+                               maxlength="20">Name
+                    </label>
+                    <label class="btn btn-primary"
+                           ng-click="changePropForSearch('PhoneNumber')">
+                        <input type="radio"
+                               name="filter"
+                               id="filterId3"
+                               value="PhoneNumber"
+                               maxlength="20">Phone number
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <h3 ng-if="NotebookList.length == 0">Empty notebook</h3>
+        <h3 ng-if="NotebookList.length > 0 && (NotebookList | filter : criteriaMatch(search, propertyForSearch)).length == 0">No data recieved...</h3>
+        <table class="table table-hover"
+               ng-if="NotebookList.length > 0 && (NotebookList | filter : criteriaMatch(search, propertyForSearch)).length > 0">
+
+            <colgroup>
+                <col class="table-col-md" />
+                <col class="table-col-md" />
+                <col class="table-col-sm" />
+                <col class="table-col-sm" />
+                <col class="table-col-md" />
+            </colgroup>
+            <thead>
+                <tr class="table-header">
+                    <td>
+                        <button class="btn btn-default"
+                                ng-click="order('Surname')">
+                            Surname
+                        </button>
+                        <i class="glyphicon"
+                           ng-show="predicate === 'Surname'"
+                           ng-class="{'glyphicon-sort-by-alphabet':!reverse,
+                               'glyphicon-sort-by-alphabet-alt':reverse}"></i>
+                    </td>
+                    <td>Name</td>
+                    <td>
+                        <button class="btn btn-default"
+                                ng-click="order('YearOfBirth')">
+                            Year of birth
+                        </button>
+                        <i class="glyphicon"
+                           ng-show="predicate === 'YearOfBirth'"
+                           ng-class="{'glyphicon-sort-by-order':!reverse,
+                               'glyphicon-sort-by-order-alt':reverse}"></i>
+                    </td>
+                    <td>Phone number</td>
+                    <td> </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="notebook in NotebookList | orderBy : predicate : reverse | filter : criteriaMatch(search, propertyForSearch) track by $index">
+
+                    <td>
+                        <span ng-if="notebook.Id !== editedNotebookId">
+                            {{notebook.Surname}}
+                        </span>
+                        <input ng-if="notebook.Id === editedNotebookId" type="text" ng-model="notebook.Surname" />
+                    </td>
+                    <td>
+                        <span ng-if="notebook.Id !== editedNotebookId">
+                            {{notebook.Name}}
+                        </span>
+                        <input ng-if="notebook.Id === editedNotebookId" type="text" ng-model="notebook.Name" />
+                    </td>
+                    <td>
+                        <span ng-if="notebook.Id !== editedNotebookId">
+                            {{notebook.YearOfBirth}}
+                        </span>
+                        <input ng-if="notebook.Id === editedNotebookId" type="text" ng-model="notebook.YearOfBirth" />
+                    </td>
+                    <td>
+                        <span ng-if="notebook.Id !== editedNotebookId">
+                            {{notebook.PhoneNumber}}
+                        </span>
+                        <input ng-if="notebook.Id === editedNotebookId" type="text" ng-model="notebook.PhoneNumber" />
+                    </td>
+
+
+                    <td>
+                        <button ng-if="notebook.Id !== editedNotebookId" class="btn btn-warning " ng-click="editRow(notebook.Id)">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+
+                        <button ng-if="notebook.Id === editedNotebookId" class="btn btn-warning " ng-click="save(notebook)">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+
+                        <button class=" btn btn-danger " ng-click="remove(notebook.Id)">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

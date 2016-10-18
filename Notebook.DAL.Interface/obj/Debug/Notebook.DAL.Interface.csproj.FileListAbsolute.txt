@@ -1,0 +1,14 @@
+\\Vikapc\d\Notebook\Notebook.DAL.Interface\bin\Debug\Notebook.DAL.Interface.dll
+\\Vikapc\d\Notebook\Notebook.DAL.Interface\bin\Debug\Notebook.DAL.Interface.pdb
+\\Vikapc\d\Notebook\Notebook.DAL.Interface\bin\Debug\Notebook.Common.Entities.dll
+\\Vikapc\d\Notebook\Notebook.DAL.Interface\bin\Debug\Notebook.Common.Entities.pdb
+\\Vikapc\d\Notebook\Notebook.DAL.Interface\obj\Debug\Notebook.DAL.Interface.csprojResolveAssemblyReference.cache
+\\Vikapc\d\Notebook\Notebook.DAL.Interface\obj\Debug\Notebook.DAL.Interface.dll
+\\Vikapc\d\Notebook\Notebook.DAL.Interface\obj\Debug\Notebook.DAL.Interface.pdb
+D:\Notebook\Notebook.DAL.Interface\bin\Debug\Notebook.DAL.Interface.dll
+D:\Notebook\Notebook.DAL.Interface\bin\Debug\Notebook.DAL.Interface.pdb
+D:\Notebook\Notebook.DAL.Interface\bin\Debug\Notebook.Common.Entities.dll
+D:\Notebook\Notebook.DAL.Interface\bin\Debug\Notebook.Common.Entities.pdb
+D:\Notebook\Notebook.DAL.Interface\obj\Debug\Notebook.DAL.Interface.csprojResolveAssemblyReference.cache
+D:\Notebook\Notebook.DAL.Interface\obj\Debug\Notebook.DAL.Interface.dll
+D:\Notebook\Notebook.DAL.Interface\obj\Debug\Notebook.DAL.Interface.pdb

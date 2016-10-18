@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en"
+      ng-app="App">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/main/main.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body ng-controller="NotebookCtrl">
+    <div class="container body-content">
+        @RenderBody()
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/scripts/angular.min.js"></script>
+    <script src="~/scripts/lodash.js"></script>
+    <script src="~/scripts/angular-ui/ui-bootstrap.js"></script>
+    <script src="~/scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="~/scripts/App/app.js"></script>
+    <script src="~/scripts/App/app.config.js"></script>
+    <script src="~/scripts/App/alert.service.js"></script>
+    <script src="~/scripts/App/filemodel.directive.js"></script>
+    <script src="~/scripts/App/notebook.controller.js"></script>
+    <script src="~/scripts/App/notebook.service.js"></script>
+</body>
+</html>

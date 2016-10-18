@@ -1,0 +1,20 @@
+﻿body {
+	padding: 50px;
+}
+
+.table-header {
+	font-weight: 700;
+}
+
+.cell-buttons {
+	width: 250px;
+}
+
+.input-container {
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+[class*="col-sm"] {
+	margin-bottom: 15px;
+}

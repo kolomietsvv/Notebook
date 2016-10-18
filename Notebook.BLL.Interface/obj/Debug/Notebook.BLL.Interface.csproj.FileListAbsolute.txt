@@ -1,0 +1,14 @@
+\\Vikapc\d\Notebook\Notebook.BLL.Interface\bin\Debug\Notebook.BLL.Interface.dll
+\\Vikapc\d\Notebook\Notebook.BLL.Interface\bin\Debug\Notebook.BLL.Interface.pdb
+\\Vikapc\d\Notebook\Notebook.BLL.Interface\bin\Debug\Notebook.Common.Entities.dll
+\\Vikapc\d\Notebook\Notebook.BLL.Interface\bin\Debug\Notebook.Common.Entities.pdb
+\\Vikapc\d\Notebook\Notebook.BLL.Interface\obj\Debug\Notebook.BLL.Interface.csprojResolveAssemblyReference.cache
+\\Vikapc\d\Notebook\Notebook.BLL.Interface\obj\Debug\Notebook.BLL.Interface.dll
+\\Vikapc\d\Notebook\Notebook.BLL.Interface\obj\Debug\Notebook.BLL.Interface.pdb
+D:\Notebook\Notebook.BLL.Interface\bin\Debug\Notebook.BLL.Interface.dll
+D:\Notebook\Notebook.BLL.Interface\bin\Debug\Notebook.BLL.Interface.pdb
+D:\Notebook\Notebook.BLL.Interface\bin\Debug\Notebook.Common.Entities.dll
+D:\Notebook\Notebook.BLL.Interface\bin\Debug\Notebook.Common.Entities.pdb
+D:\Notebook\Notebook.BLL.Interface\obj\Debug\Notebook.BLL.Interface.csprojResolveAssemblyReference.cache
+D:\Notebook\Notebook.BLL.Interface\obj\Debug\Notebook.BLL.Interface.dll
+D:\Notebook\Notebook.BLL.Interface\obj\Debug\Notebook.BLL.Interface.pdb
