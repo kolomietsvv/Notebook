@@ -1,5 +1,7 @@
 The application allows to store, add, update and delete notes in notebook.
 
+Application was builded in Microsoft Visual Studio 2013.
+
 To build the solution you need to execute command 'Update-Package -Reinstall -ProjectName Notebook.PL.WebAPI' in package manager console.
 
 You can change the path of notebook file in \Notebook\Notebook.PL.WebAPI\Web.config file in
