@@ -86,6 +86,7 @@ D:\Notebook\Notebook.PL.WebAPI\bin\Microsoft.AI.Web.dll
 D:\Notebook\Notebook.PL.WebAPI\bin\Microsoft.AI.WindowsServer.dll
 D:\Notebook\Notebook.PL.WebAPI\bin\Microsoft.ApplicationInsights.dll
 D:\Notebook\Notebook.PL.WebAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Notebook\Notebook.PL.WebAPI\bin\Microsoft.Web.Infrastructure.dll
 D:\Notebook\Notebook.PL.WebAPI\bin\Newtonsoft.Json.dll
 D:\Notebook\Notebook.PL.WebAPI\bin\Notebook.BLL.Core.dll
 D:\Notebook\Notebook.PL.WebAPI\bin\Notebook.BLL.Interface.dll
